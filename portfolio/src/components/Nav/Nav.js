@@ -1,12 +1,11 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
 
-class Nav extends Component {
-    render() {
-        <div className="navigation">
-            This is the navbar
-        </div>
-    }
-}
+const Nav = () => (
+  <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a className="navbar-brand" href="/">
+      Lina Kichen
+    </a>
+  </nav>
+);
 
 export default Nav;

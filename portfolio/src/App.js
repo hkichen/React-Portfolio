@@ -1,15 +1,17 @@
-import React, { Component } from 'react';
-import { Router, Route } from 'react-router-dom';
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Cover from './components/Cover';
 import Nav from './components/Nav';
 
-export const AppRouter = () => {
-  return (
-    <Router component={Landing}>
-      <div>
-        <Route path="/" component={Nav} />
-        <Route path="/home" component={Cover} />
-      </div>
-    </Router>
-  );
-};
+const App = () => (
+  <Router>
+    <div>
+      <Nav />
+      <Switch>
+        <Route exact path="/" component={Cover} />
+      </Switch>
+    </div>
+  </Router>
+);
+
+export default App;
